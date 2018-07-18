@@ -41,6 +41,14 @@
 			$(this).toggleClass('is-active');
 			$('.nav').toggleClass('is-visible');
 			$('body, header').toggleClass('nav-open');
+
+			/*if ($('#splitscreen').length) {
+				if ($('body').hasClass('nav-open')) {
+					$.fn.fullpage.setAutoScrolling(false);
+				} else {
+					$.fn.fullpage.setAutoScrolling(true);
+				}
+			}*/
         });
 
 		// HEADER SCROLL
@@ -96,6 +104,10 @@
 			$('.lightbox-content').removeClass('is-visible');
 			$('body').removeClass('overflow-hidden nav-open');
 		});
+
+		// WOW
+		$('.inhalt p, .inhalt h1, .inhalt h2, .inhalt h3, .inhalt h4, .inhalt h5, .inhalt blockquote, .inhalt ul').addClass('wow fadeInUp');
+		$('.inhalt img').addClass('wow fadeIn').attr('data-wow-delay', '0s');
 
 		wow = new WOW({
 			boxClass: 'wow',
